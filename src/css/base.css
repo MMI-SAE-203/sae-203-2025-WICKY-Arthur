@@ -25,8 +25,8 @@
    a{
       @apply text-xl font-heading font-semibold text-white;
    }
-   button{
-      @apply uppercase
+   section{
+      @apply p-6;
    }
 }
 
@@ -35,6 +35,6 @@
       @apply overflow-hidden;
    }
    .container {
-      @apply max-w-screen-xl mx-auto px-6;
+      @apply max-w-screen-xl mx-auto p-8;
    }
 }

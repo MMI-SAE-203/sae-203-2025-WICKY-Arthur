@@ -11,22 +11,72 @@ import Layout from "../layouts/Layout.astro";
 				alt=""
 			/>
 		</div>
-		<div>
-			<h2>Découvrez Flash cinéma 25 du 8 au 10 août !</h2>
-			<p>
-				Un festival avec des films si courts que vous aurez encore le
-				temps pour l'apéro, du fromage et des montagnes !
-			</p>
-		</div>
-		<div class="flex justify-center">
-			<button class="bg-orange-400 rounded-xl p-2">
-				<a href="/billetterie">Accéder à la billeterie</a>
+		<section>
+			<div>
+				<h1>Découvrez Flash cinéma 25 du 8 au 10 août !</h1>
+				<p>
+					Un festival avec des films si courts que vous aurez encore
+					le temps pour l'apéro, du fromage et des montagnes !
+				</p>
+			</div>
+		</section>
+		<div class="py-4 flex justify-center">
+			<button class="uppercase bg-orange-400 rounded-xl p-3">
+				<a class="text-2xl" href="/billetterie"
+					>Accéder à la billeterie</a
+				>
 			</button>
 		</div>
-		<div>
-			<img src="" alt="" /><a href="/programmation">Programmation</a>
-		</div>
-		<div><button><a href=""></a></button></div>
+		<section>
+			<div>
+				<img src="" alt="" /><button
+					class="uppercase bg-orange-400 rounded-xl p-3"
+					><a href="/programmation">Programmation</a></button
+				>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h3>Nos partenaires :</h3>
+				<p>
+					Nos partenaires, occupent un rôle essentiel et nous tenons à
+					les remercier chaleureusement pour leur soutien indéfectible
+					et précieux qui contribue à la réussite et au rayonnement de
+					chaque manifestation.
+				</p>
+			</div>
+			<div class="mt-12 mb-16">
+				<ul>
+					<div class="flex list-none items-center gap-16">
+						<li>
+							<figure>
+								<img
+									src="./src/assets/images/pole-metiers-arts.avif"
+									alt=""
+								/>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img
+									class="pt-4"
+									src="./src/assets/images/cnc.avif"
+									alt=""
+								/>
+							</figure>
+						</li>
+					</div>
+					<li>
+						<figure>
+							<img
+								class="mt-4"
+								src="./src/assets/images/bfc.avif"
+								alt=""
+							/>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</section>
 	</body>
 </Layout>
-
