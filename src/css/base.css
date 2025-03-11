@@ -1,0 +1,40 @@
+@import url('https: //fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+   --font-heading: 'Quicksand', sans-serif;
+   --font-body: 'Mulish', sans-serif;
+}
+
+@layer base{
+   body{
+      @apply font-body text-base leading-normal text-black;
+   }
+   h1{
+      @apply text-2xl lg:text-4xl;
+   }
+   h2 {
+      @apply text-xl lg:text-2xl;
+   }
+   h3 {
+      @apply text-lg;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      @apply font-heading font-semibold;
+   }
+   a{
+      @apply text-xl font-heading font-semibold text-white;
+   }
+   button{
+      @apply uppercase
+   }
+}
+
+@layer components {
+   .noscroll {
+      @apply overflow-hidden;
+   }
+   .container {
+      @apply max-w-screen-xl mx-auto px-6;
+   }
+}

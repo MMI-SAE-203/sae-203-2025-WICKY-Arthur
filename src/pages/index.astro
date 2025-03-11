@@ -1,11 +1,32 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<body>
+		<div class="relative">
+			<img
+				class="z-0 w-full relative"
+				src="./src/assets/images/cineexterieur.avif"
+				alt=""
+			/>
+		</div>
+		<div>
+			<h2>Découvrez Flash cinéma 25 du 8 au 10 août !</h2>
+			<p>
+				Un festival avec des films si courts que vous aurez encore le
+				temps pour l'apéro, du fromage et des montagnes !
+			</p>
+		</div>
+		<div class="flex justify-center">
+			<button class="bg-orange-400 rounded-xl p-2">
+				<a href="/billetterie">Accéder à la billeterie</a>
+			</button>
+		</div>
+		<div>
+			<img src="" alt="" /><a href="/programmation">Programmation</a>
+		</div>
+		<div><button><a href=""></a></button></div>
+	</body>
 </Layout>
+
