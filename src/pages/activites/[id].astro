@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+import { ActivityById } from '../../../backend/backend.mjs';
+import CardActivite from '../../components/CardActivite.astro';
+const { id } = Astro.params;
+const activite = await ActivityById(id);
+---
+
+<Layout>
+    <div></div>
+</Layout>

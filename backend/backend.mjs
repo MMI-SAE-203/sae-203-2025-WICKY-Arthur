@@ -1,5 +1,6 @@
 import PocketBase from 'pocketbase';
 const pb = new PocketBase('http://127.0.0.1:8090')
+export {pb};
 
 export async function allFilmSorted() {
     return await pb.collection('Film').getFullList({ sort: 'projection_film' });

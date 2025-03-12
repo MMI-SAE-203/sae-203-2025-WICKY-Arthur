@@ -3,12 +3,11 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <section>
-        <div>
-            <h1>À propos</h1>
-            <img src="" alt="" />
-        </div>
-    </section>
+    <div class="flex justify-center">
+        <h1 class="absolute pt-26">À propos</h1>
+        <img src="./src/assets/images/hero_about.avif" alt="" />
+    </div>
+
     <section>
         <div>
             <h2>Présentation du festival</h2>
@@ -54,26 +53,118 @@ import Layout from "../layouts/Layout.astro";
                 bon fonctionnement de notre festival
             </p>
         </div>
+        <div>
+            <div class="flex align-center gap-10 py-4">
+                <li class="flex flex-col">
+                    <img
+                        src="./src/assets/images/alexandre_morel.avif"
+                        alt=""
+                    />
+                    <div>
+                        <p>Alexandre Morel</p>
+                        <p class="font-light text-tiny">Directeur Artistique</p>
+                    </div>
+                </li>
+                <li class="flex flex-col">
+                    <img src="./src/assets/images/sophie_durand.avif" alt="" />
+                    <div>
+                        <p>Sophie Durand</p>
+                        <p class="font-light text-tiny">
+                            Responsable communication
+                        </p>
+                    </div>
+                </li>
+            </div>
+
+            <div class="flex align-center gap-10 pb-4">
+                <li class="flex flex-col">
+                    <img src="./src/assets/images/claire_bernard.avif" alt="" />
+                    <div>
+                        <p>Claire Bernard</p>
+                        <p class="font-light text-tiny">
+                            Responsable partenariats et financement
+                        </p>
+                    </div>
+                </li>
+                <li class="flex flex-col">
+                    <img src="./src/assets/images/jules_lefevre.avif" alt="" />
+                    <div>
+                        <p>Jules Lefèvre</p>
+                        <p class="font-light text-tiny">
+                            Coordinateur logistique
+                        </p>
+                    </div>
+                </li>
+            </div>
+
+            <div class="flex align-center gap-10 pb-4">
+                <li class="flex flex-col">
+                    <img
+                        src="./src/assets/images/thomas_gauthier.avif"
+                        alt=""
+                    />
+                    <div>
+                        <p>Thomas Gauthier</p>
+                        <p class="font-light text-tiny">
+                            Responsable technique
+                        </p>
+                    </div>
+                </li>
+                <li class="flex flex-col">
+                    <img src="./src/assets/images/camille_perrin.avif" alt="" />
+                    <div>
+                        <p>Camille Perrin</p>
+                        <p class="font-light text-tiny">
+                            Responsable billetterie
+                        </p>
+                    </div>
+                </li>
+            </div>
+            <div class="flex align-center gap-10 pb-4">
+                <li class="flex flex-col">
+                    <img
+                        src="./src/assets/images/elise_martineau.avif"
+                        alt=""
+                    />
+                    <div>
+                        <p>Élise Martineau</p>
+                        <p class="font-light text-tiny">
+                            Responsable développement durable
+                        </p>
+                    </div>
+                </li>
+                <li class="flex flex-col">
+                    <img src="./src/assets/images/lucas_fontaine.avif" alt="" />
+                    <div>
+                        <p>Lucas Fontaine</p>
+                        <p class="font-light text-tiny">
+                            Chargé de programmation
+                        </p>
+                    </div>
+                </li>
+            </div>
+        </div>
     </section>
+
     <section>
         <h2>Charte de notre Festival</h2>
         <div>
             <h3>Nos valeurs</h3>
-            <ul>
+            <ul class="flex flex-col gap-2">
                 <li>
-                    Accessibilité & Convivialité : Un lieu d’échange chaleureux
-                    entre cinéphiles et talents émergents.
+                    - Accessibilité & Convivialité : Un lieu d’échange
+                    chaleureux entre cinéphiles et talents émergents.
                 </li>
                 <li>
-                    Soutien aux Jeunes Réalisateurs : Une plateforme pour mettre
-                    en lumière les nouveaux visages du cinéma.
+                    - Soutien aux Jeunes Réalisateurs : Une plateforme pour
+                    mettre en lumière les nouveaux visages du cinéma.
                 </li>
                 <li>
-                    Diversité & Innovation : Un espace d’expression pour des
+                    - Diversité & Innovation : Un espace d’expression pour des
                     visions variées et originales du court-métrage.
                 </li>
                 <li>
-                    Engagement Écoresponsable : Sensibilisation et actions
+                    - Engagement Écoresponsable : Sensibilisation et actions
                     concrètes pour un festival durable.
                 </li>
             </ul>
@@ -85,12 +176,13 @@ import Layout from "../layouts/Layout.astro";
             </p>
         </div>
         <div>
-            <h3>Nos Engagements</h3><ul>
-                <li>Offrir un tremplin aux jeunes talents</li>
-                <li>Encourager les rencontres et débats.</li>
-                <li>Proposer une programmation qualitative et accessible</li>
-                <li>Réduire l’impact écologique du festival.</li>
-                <li>Valoriser la culture audiovisuelle locale.</li>
+            <h3>Nos Engagements</h3>
+            <ul class="flex flex-col gap-2">
+                <li>- Offrir un tremplin aux jeunes talents</li>
+                <li>- Encourager les rencontres et débats.</li>
+                <li>- Proposer une programmation qualitative et accessible</li>
+                <li>- Réduire l’impact écologique du festival.</li>
+                <li>- Valoriser la culture audiovisuelle locale.</li>
             </ul>
         </div>
     </section>

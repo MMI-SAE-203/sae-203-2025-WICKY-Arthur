@@ -4,6 +4,7 @@
 @theme {
    --font-heading: 'Quicksand', sans-serif;
    --font-body: 'Mulish', sans-serif;
+   --text-tiny: 0.625rem;
 }
 
 @layer base{
@@ -11,13 +12,13 @@
       @apply font-body text-base leading-normal text-black;
    }
    h1{
-      @apply text-2xl lg:text-4xl;
+      @apply text-3xl lg:text-5xl font-bold;
    }
    h2 {
       @apply text-xl lg:text-2xl;
    }
    h3 {
-      @apply text-lg;
+      @apply text-lg py-4;
    }
    h1, h2, h3, h4, h5, h6 {
       @apply font-heading font-semibold;

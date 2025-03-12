@@ -1,0 +1,18 @@
+---
+import { Picture } from "astro:assets";
+import ImagePB from "./ImagePB.astro";
+const { ...Activite } = Astro.props;
+---
+
+<article>
+    <h3>{Activite.titre_activite}</h3>
+    <a href={`/activites/${Activite.id}`}>
+        <ImagePB
+            record={Activite}
+            field="image_activite"
+            alt={Activite.imgAlt}
+            classPicture="duotone col-start-1 row-start-1 col-span-2 row-span-2 group-hover:before:bg-black"
+            classImg="group-hover:grayscale-0 group-hover:mix-blend-normal w-[390px] h-[390px] object-cover py-6"
+        />
+    </a>
+</article>

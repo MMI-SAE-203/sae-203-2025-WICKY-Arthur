@@ -1,18 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import CardActivite from "../../components/CardActivite.astro";
+import { allActivitiesSorted } from "../../../backend/backend.mjs";
+const activities = await allActivitiesSorted();
 ---
 
 <Layout>
+    <div class="flex justify-center">
+        <h1 class="absolute pt-12">Activités</h1>
+        <img src="./src/assets/images/hero_activites.avif" alt="" />
+    </div>
     <section>
-        <div>
-            <h1>Activités</h1>
-            <img src="" alt="" />
-        </div>
         <div>
             <h2>
                 Voici la liste des activités que vous pourrez retrouver lors de
                 notre festival !
             </h2>
+        </div>
+        <div>
+            {activities.map((activite) => <CardActivite {...activite} />)}
         </div>
     </section>
 </Layout>
