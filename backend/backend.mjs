@@ -19,11 +19,13 @@ export async function FilmById(id) {
 }
 
 export async function ActivityById(id) {
-    return await pb.collection('Activite').getOne(id);
+    const activite = await pb.collection('Activite').getOne(id, { expand: 'anime' });
+    return activite;
 }
 
 export async function InviteById(id) {
-    return await pb.collection('Invite').getOne(id);
+    const invite = await pb.collection('Invite').getOne(id, { expand: 'activite_invite' });
+    return invite;
 }
 
 export async function ActivityByInviteId(id) {
