@@ -1,6 +1,6 @@
 import PocketBase from 'pocketbase';
 const pb = new PocketBase('http://127.0.0.1:8090')
-export {pb};
+export { pb };
 
 export async function allFilmSorted() {
     return await pb.collection('Film').getFullList({ sort: 'projection_film' });
@@ -33,6 +33,7 @@ export async function ActivityByInviteId(id) {
     });
     return activityInviteId;
 }
+
 
 export async function ActivityByInviteName(nom) {
     const activityInviteName = await pb.collection('Activite').getFullList({

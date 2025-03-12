@@ -68,7 +68,7 @@ import fs from 'fs';
 // }
 
 // AJOUT & MODIFICATION FILM
-const nouveauRecord = {
+// const nouveauRecord = {
     // "titre_film": "El Filmos",
     // "affiche_film": fs.readFileSync("./backend/image.png"),
     // "synopsis_film": "Larry, un chat espiègle et aventurier, vit paisiblement dans une petite ville jusqu’au jour où il découvre qu’il lui reste une seule de ses neuf vies. Bien décidé à en profiter au maximum, il se lance dans une série d’aventures rocambolesques : échapper à un chien trop curieux, infiltrer un restaurant pour voler du saumon, et même jouer les héros en sauvant un oiseau piégé. Mais lorsqu’il réalise que sa dernière vie est précieuse non pas pour ses exploits, mais pour ceux qui l’aiment, Félix devra choisir entre ses farces habituelles et un acte de bravoure qui pourrait tout changer.",
@@ -80,10 +80,10 @@ const nouveauRecord = {
     // "langue_film": "Français",
     // "acteurs_film": "Larry",
     // "ba_film": "https://www.youtube.com/watch?v=IxX_QHay02M&pp=ygUUdmlkZW8gY2hhdCBxdWkgZGFuc2U%3D",
-};
+// };
 // await addNewRecord('Film', nouveauRecord);
-const data = {
-    "titre_film": "C'était Larry",
-};
+// const data = {
+//     "titre_film": "C'était Larry",
+// };
 //await updateRecordById('Film', '240bfwpd25z75yv', data);
 
