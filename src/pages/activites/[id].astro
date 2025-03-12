@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ImagePB from "../../components/ImagePB.astro";
+import CardInvite from "../../components/CardInvite.astro";
 import { ActivityById } from "../../../backend/backend.mjs";
 import { InviteById } from "../../../backend/backend.mjs";
 import { formatDate } from "../../js/utils.js";
@@ -34,7 +35,10 @@ const Invite = await InviteById(IdInvite.id);
     </section>
     <section class="pt-0">
         <h3>Invité présent</h3>
-        <ImagePB
+        <div>
+            <CardInvite {...Invite} />
+        </div>
+        <!-- <ImagePB
             record={Invite}
             field="image_invite"
             alt={Invite.imgAlt}
@@ -42,6 +46,6 @@ const Invite = await InviteById(IdInvite.id);
             classImg="group-hover:grayscale-0 group-hover:mix-blend-normal w-full object-cover"
         />
         <p class="pt-2">{Invite.prenom_invite} {Invite.nom_invite}</p>
-        <p class="text-sm font-light">{Invite.profession_invite}</p>
+        <p class="text-sm font-light">{Invite.profession_invite}</p> -->
     </section>
 </Layout>

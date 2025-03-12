@@ -1,6 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import CardInvite from "../../components/CardInvite.astro";
+import { allInviteSorted } from "../../../backend/backend.mjs";
+const invites = await allInviteSorted();
 ---
 
 <Layout>
@@ -26,7 +28,7 @@ import CardInvite from "../../components/CardInvite.astro";
         </section>
         <section>
             <div>
-
+                {invites.map((invite) => <CardInvite {...invite} />)}
             </div>
         </section>
     </body>
