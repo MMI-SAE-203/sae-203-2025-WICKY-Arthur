@@ -1,17 +1,141 @@
 ---
 import ImagePB from "./ImagePB.astro";
+import { formatDate, formatDateNoHour } from "../js/utils.js";
+
 const { ...Activite } = Astro.props;
 ---
 
-<article>
-    <h3 class="pt-12 pb-0">{Activite.titre_activite}</h3>
-    <a href={`/activites/${Activite.id}`}>
-        <ImagePB
-            record={Activite}
-            field="image_activite"
-            alt={Activite.imgAlt}
-            classPicture="duotone col-start-1 row-start-1 col-span-2 row-span-2 group-hover:before:bg-black"
-            classImg="group-hover:grayscale-0 group-hover:mix-blend-normal w-[390px] object-cover"
-        />
-    </a>
+<article
+    class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full transition duration-300 hover:shadow-lg group"
+>
+    <div class="relative">
+        <a href={`/activites/${Activite.id}`} class="block">
+            <ImagePB
+                record={Activite}
+                field="image_activite"
+                alt={Activite.titre_activite || "Image de l'activité"}
+                classPicture="w-full aspect-[16/9] overflow-hidden duotone group-hover:before:bg-black"
+                classImg="w-full h-[full] object-cover transition-all duration-300 group-hover:grayscale-0 group-hover:scale-105 group-hover:mix-blend-normal"
+            />
+
+            <!-- Category Badge -->
+            {
+                Activite.categorie_activite && (
+                    <span class="absolute top-4 right-4 bg-orange-400 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        {Activite.categorie_activite}
+                    </span>
+                )
+            }
+        </a>
+    </div>
+
+    <div class="p-5 flex-grow flex flex-col">
+        <h3
+            class="text-xl font-bold text-orange-400 mb-3 group-hover:text-orange-500 transition-colors"
+        >
+            <a class="text-orange-400" href={`/activites/${Activite.id}`}>
+                {Activite.titre_activite}
+            </a>
+        </h3>
+
+        <!-- Date & Time -->
+        {
+            Activite.dateheure_activite && (
+                <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                    </svg>
+                    <span>{formatDate(Activite.dateheure_activite)}</span>
+                </div>
+            )
+        }
+
+        <!-- Location -->
+        {
+            Activite.lieu_activite && (
+                <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                    </svg>
+                    <span>{Activite.lieu_activite}</span>
+                </div>
+            )
+        }
+
+        <!-- Description -->
+        {
+            Activite.description_activite && (
+                <div class="text-sm text-gray-700 mb-4 line-clamp-3">
+                    <p set:html={Activite.description_activite} />
+                </div>
+            )
+        }
+        <!-- Button -->
+        <div class="mt-4 mb-0">
+            <a
+                href={`/activites/${Activite.id}`}
+                class="bottom-0 block text-center bg-orange-400 hover:bg-orange-500 transition-colors text-white rounded-lg py-2 px-4 font-medium"
+            >
+                Voir les détails
+            </a>
+        </div>
+    </div>
 </article>
+
+<style>
+    /* Style pour l'effet duotone */
+    .duotone {
+        position: relative;
+    }
+
+    .duotone:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 75, 145, 0.3); /* Teinte bleue */
+        mix-blend-mode: color;
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .duotone img {
+        filter: grayscale(100%) contrast(1.2);
+        mix-blend-mode: multiply;
+        transition: all 0.3s ease;
+    }
+
+    .group:hover .duotone:before {
+        background: rgba(0, 0, 0, 0);
+    }
+</style>
