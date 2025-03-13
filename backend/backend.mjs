@@ -15,7 +15,7 @@ export async function allInviteSorted() {
 }
 
 export async function FilmById(id) {
-    return await pb.collection('Film').getOne(id);
+    return await pb.collection('Film').getOne(id, {expand: 'present'});
 }
 
 export async function ActivityById(id) {

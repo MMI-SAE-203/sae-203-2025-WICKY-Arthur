@@ -11,12 +11,12 @@ import { addNewRecord } from "./backend.mjs";
 import { updateRecordById } from "./backend.mjs";
 import fs from 'fs';
 
-// try{
-//     const result = await allFilmSorted();
-//     console.log(result);
-// } catch (e){
-//     console.error(e);
-// }
+try{
+    const result = await allFilmSorted();
+    console.log(result);
+} catch (e){
+    console.error(e);
+}
 
 // try {
 //     const result = await allActivitiesSorted();

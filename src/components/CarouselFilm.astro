@@ -4,10 +4,7 @@ import { allFilmSorted } from "../../backend/backend.mjs";
 const Film = await allFilmSorted();
 ---
 
-<div
-    id="carousel-film"
-    class="relative overflow-hidden w-full rounded-lg"
->
+<div id="carousel-film" class="relative overflow-hidden w-full rounded-lg">
     <!-- Film Slides -->
     <div class="relative h-auto bg-sky-950/10">
         {
@@ -67,7 +64,7 @@ const Film = await allFilmSorted();
                                 </div>
                                 <div class="mt-4">
                                     <a
-                                        href={`/films/${film.id}`}
+                                        href={`/programmation/${film.id}`}
                                         class="inline-block bg-orange-400 text-sky-950 font-medium py-2 px-4 rounded-lg hover:bg-orange-500 transition-colors"
                                     >
                                         Voir détails
