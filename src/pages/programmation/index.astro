@@ -5,9 +5,18 @@ import Layout from "../../layouts/Layout.astro";
 
 <Layout>
     <body>
-        <div class="flex justify-center">
-            <h1 class="absolute pt-12">Programmation</h1>
-            <img src="./src/assets/images/hero_prog.avif" alt="" />
+        <div class="flex lg:relative">
+            <img
+                class="lg:hidden"
+                src="./src/assets/images/hero_prog.avif"
+                alt=""
+            />
+            <img
+                class="hidden lg:block w-1/2 lg:rounded-br-xl"
+                src="./src/assets/images/prog_accueil.avif"
+                alt=""
+            />
+            <h1 class="absolute p-8">Programmation</h1>
         </div>
         <section>
             <div>
@@ -21,93 +30,102 @@ import Layout from "../../layouts/Layout.astro";
         <section>
             <div>
                 <h2 class="pb-4">Programmation du festival</h2>
-                <CarouselFilm/>
+                <CarouselFilm />
             </div>
         </section>
         <section>
-            <div></a>
-                <h3>Séances spéciales</h3>
-                <p>
-                    Plongez dans l’univers unique du festival avec des
-                    événements exclusifs :
-                </p>
-                <ul class="list-disc pl-6">
-                    <li>
-                        <p>
-                            Avant-premières : Découvrez en exclusivité des
-                            œuvres inédites et échangez avec leurs créateurs
-                            lors de projections intimistes.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Masterclasses : Apprenez des plus grands noms du
-                            cinéma et de l’audiovisuel grâce à des sessions
-                            pédagogiques captivantes.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Rencontres : Participez à des discussions
-                            privilégiées avec des réalisateurs, scénaristes ou
-                            acteurs, et explorez les coulisses de leurs
-                            créations.
-                        </p>
-                    </li>
-                </ul>
-                <figure class="pt-4 pb-4">
-                    <img src="./src/assets/images/masterclass.avif" alt="" />
-                    <figcaption class="flex justify-center pt-2">
-                        Masterclass sur l'animation
-                    </figcaption>
-                </figure>
-            </div>
-            <div>
-                <h3>Activités annexes</h3>
-                <p>
-                    Le festival, c’est bien plus que des projections ! Profitez
-                    d’un éventail d’activités pour enrichir votre expérience :
-                </p>
-                <ul class="list-disc pl-6">
-                    <li>
-                        <p>
-                            Ateliers : Initiez-vous aux techniques
-                            audiovisuelles, du montage vidéo à l’écriture de
-                            scénario, encadré par des professionnels.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Expositions : Admirez des installations artistiques
-                            et photographiques célébrant le 7ᵉ art.
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            Animations : Vibrez avec des performances en direct,
-                            projections en plein air, et moments conviviaux pour
-                            tous les âges.
-                        </p>
-                    </li>
-                </ul>
-                <figure class="pt-4">
-                    <img src="./src/assets/images/musee.avif" alt="" />
-                    <figcaption class="flex justify-center pt-2">
-                        Musée Gustave Courbet
-                    </figcaption>
-                </figure>
-            </div>
+            <div></div>
+            <h3>Séances spéciales</h3>
+            <p>
+                Plongez dans l’univers unique du festival avec des événements
+                exclusifs :
+            </p>
+            <ul class="list-disc pl-6">
+                <li>
+                    <p>
+                        Avant-premières : Découvrez en exclusivité des œuvres
+                        inédites et échangez avec leurs créateurs lors de
+                        projections intimistes.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Masterclasses : Apprenez des plus grands noms du cinéma
+                        et de l’audiovisuel grâce à des sessions pédagogiques
+                        captivantes.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Rencontres : Participez à des discussions privilégiées
+                        avec des réalisateurs, scénaristes ou acteurs, et
+                        explorez les coulisses de leurs créations.
+                    </p>
+                </li>
+            </ul>
+            <figure class="pt-4 pb-4">
+                <img src="./src/assets/images/masterclass.avif" alt="" />
+                <figcaption class="flex justify-center pt-2">
+                    Masterclass sur l'animation
+                </figcaption>
+            </figure>
         </section>
-        <section>
-            <div>
-                <h3>Téléchargement du programme (PDF)</h3>
-                <p>
-                    Pour ne rien manquer, téléchargez le programme complet du
-                    festival en un clic. Disponible au format PDF, il est conçu
-                    pour vous accompagner partout, en ligne ou hors ligne.
-                    <a class="text-black" href="">[Télécharger ici]</a>
-                </p>
-            </div>
-        </section>
+        <div>
+            <h3>Activités annexes</h3>
+            <p>
+                Le festival, c’est bien plus que des projections ! Profitez d’un
+                éventail d’activités pour enrichir votre expérience :
+            </p>
+            <ul class="list-disc pl-6">
+                <li>
+                    <p>
+                        Ateliers : Initiez-vous aux techniques audiovisuelles,
+                        du montage vidéo à l’écriture de scénario, encadré par
+                        des professionnels.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Expositions : Admirez des installations artistiques et
+                        photographiques célébrant le 7ᵉ art.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Animations : Vibrez avec des performances en direct,
+                        projections en plein air, et moments conviviaux pour
+                        tous les âges.
+                    </p>
+                </li>
+            </ul>
+            <figure class="pt-4">
+                <img src="./src/assets/images/musee.avif" alt="" />
+                <figcaption class="flex justify-center pt-2">
+                    Musée Gustave Courbet
+                </figcaption>
+            </figure>
+        </div>
     </body>
+    <section>
+        <div>
+            <h3>Téléchargement du programme (PDF)</h3>
+            <p>
+                Pour ne rien manquer, téléchargez le programme complet du
+                festival en un clic. Disponible au format PDF, il est conçu pour
+                vous accompagner partout, en ligne ou hors ligne.
+                <a class="text-black" href="">[Télécharger ici]</a>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h3>Ajoutez un film</h3>
+            <p>
+                Cliquez <a
+                    class="text-black font-semibold"
+                    href="/programmation/add">ici</a
+                > pour ajouter un film
+            </p>
+        </div>
+    </section>
 </Layout>

@@ -47,7 +47,20 @@ export async function ActivityByInviteName(nom) {
 
 //Ajouter et modifier les infos d'un film activité ou invité
 export async function addNewRecord(collection, newRecord) {
-    await pb.collection(collection).create(newRecord);
+    try {
+        await pb.collection(collection).create(newRecord);
+        return {
+            success: true,
+            message: 'Offre ajoutée avec succès'
+        };
+    } catch (error) {
+        console.log('Une erreur est survenue en ajoutant la maison', error);
+        return {
+            success: false,
+            message: 'Une erreur est survenue en ajoutant la maison'
+        };
+    }
+    // await pb.collection(collection).create(newRecord);
 }
 export async function updateRecordById(collection, id, data) {
     await pb.collection(collection).update(id, data);

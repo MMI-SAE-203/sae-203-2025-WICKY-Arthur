@@ -4,6 +4,13 @@ import FacebookColored from "../assets/icons/facebook_colored.svg";
 import InstaColored from "../assets/icons/group39(3).svg";
 import TwitterColored from "../assets/icons/twitter_colored.svg";
 import YoutubeColored from "../assets/icons/youtube_colored.svg";
+import { addNewRecord } from "../../backend/backend.mjs";
+let message = "";
+if (Astro.request.method === "POST") {
+    const formData = await Astro.request.formData();
+    const response = await addNewRecord(formData);
+    message = response.message;
+}
 ---
 
 <Layout>
@@ -27,24 +34,64 @@ import YoutubeColored from "../assets/icons/youtube_colored.svg";
         <div>
             <h3>Nous contacter :</h3>
         </div>
-        <div><h1>Formulaire</h1></div>
+        <form
+            class="flex flex-col gap-3"
+            action="contact"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <input
+                type="text"
+                name="Nom"
+                placeholder="Nom"
+                required
+                class="w-full mt-2 p-2 border border-gray-300 rounded-md"
+            />
+            <input
+                type="text"
+                name="Prénom"
+                placeholder="Prénom"
+                required
+                class="w-full mt-2 p-2 border border-gray-300 rounded-md"
+            />
+            <input
+                type="email"
+                name="Email"
+                placeholder="Email"
+                required
+                class="w-full mt-2 p-2 border border-gray-300 rounded-md"
+            />
+            <textarea
+                name="Message"
+                placeholder="Message"
+                required
+                class="w-full mt-2 p-2 border border-gray-300 rounded-md"
+            ></textarea>
+            <div class="flex justify-end">
+                <button
+                    class="text-white font-semibold uppercase bg-orange-400 rounded-xl p-3"
+                    type="submit"
+                >
+                    Envoyer
+                </button>
+            </div>
+        </form>
+        <section>
+            <h3>Nos réseaux sociaux :</h3>
+            <div class="flex justify-between py-4">
+                <div class="flex flex-col justify-center items-center">
+                    <FacebookColored /><p>Facebook</p>
+                </div>
+                <div class="flex flex-col align- justify-center items-center">
+                    <InstaColored /><p>Instagram</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <TwitterColored /><p>Twitter</p>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <YoutubeColored /><p>Youtube</p>
+                </div>
+            </div>
+        </section>
     </section>
-
-    <div class="mx-8">
-        <h3>Nos réseaux sociaux :</h3>
-        <div class="flex justify-between py-4">
-            <div class="flex flex-col justify-center items-center">
-                <FacebookColored /><p>Facebook</p>
-            </div>
-            <div class="flex flex-col align- justify-center items-center">
-                <InstaColored /><p>Instagram</p>
-            </div>
-            <div class="flex flex-col justify-center items-center">
-                <TwitterColored /><p>Twitter</p>
-            </div>
-            <div class="flex flex-col justify-center items-center">
-                <YoutubeColored /><p>Youtube</p>
-            </div>
-        </div>
-    </div>
 </Layout>
