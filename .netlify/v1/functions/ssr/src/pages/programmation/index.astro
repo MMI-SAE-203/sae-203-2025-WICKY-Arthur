@@ -1,0 +1,212 @@
+---
+import CarouselFilm from "../../components/CarouselFilm.astro";
+import Layout from "../../layouts/Layout.astro";
+import FilmCard from "../../components/CardFilm.astro";
+import { allFilmSorted } from "../../../backend/backend.mjs";
+
+const Film = await allFilmSorted();
+---
+
+<Layout>
+    <div class="container mx-auto px-4">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-8">
+            <div class="lg:col-span-6 flex relative">
+                <img
+                    class="w-full lg:hidden"
+                    src="./src/assets/images/hero_prog.avif"
+                    alt="Bannière programmation"
+                />
+                <img
+                    class="hidden lg:block w-full h-[400px] object-cover rounded-lg"
+                    src="./src/assets/images/prog_accueil.avif"
+                    alt="Bannière programmation"
+                />
+                <h1
+                    class="absolute left-0 top-0 p-8 text-4xl lg:text-5xl font-bold text-white drop-shadow-lg"
+                >
+                    Programmation
+                </h1>
+            </div>
+
+            <div class="lg:col-span-6 flex items-center mt-6 lg:mt-0">
+                <div class="bg-sky-950/5 p-6 lg:p-8 rounded-lg">
+                    <h2 class="text-xl lg:text-2xl font-semibold mb-4">
+                        Voici la liste des films choisis par nos soins pour une
+                        expérience cinématographique unique et diversifiée.
+                    </h2>
+                    <p class="text-gray-700">
+                        Découvrez notre sélection soigneusement préparée par
+                        notre comité de programmation, mettant en avant des
+                        œuvres originales, des talents émergents et des films
+                        primés dans divers festivals internationaux.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <div class="lg:grid lg:grid-cols-12">
+                <div class="lg:col-span-12">
+                    <h2 class="text-2xl lg:text-3xl font-bold pb-6">
+                        Programmation du festival
+                    </h2>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        {Film && Film.map((film) => <FilmCard film={film} />)}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="mb-16">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div class="lg:col-span-7">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4">
+                    Séances spéciales
+                </h3>
+                <p class="text-lg mb-6">
+                    Plongez dans l'univers unique du festival avec des
+                    événements exclusifs :
+                </p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Avant-premières</span
+                            > : Découvrez en exclusivité des œuvres inédites et échangez
+                            avec leurs créateurs lors de projections intimistes.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Masterclasses</span
+                            > : Apprenez des plus grands noms du cinéma et de l'audiovisuel
+                            grâce à des sessions pédagogiques captivantes.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Rencontres</span
+                            > : Participez à des discussions privilégiées avec des
+                            réalisateurs, scénaristes ou acteurs, et explorez les
+                            coulisses de leurs créations.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="lg:col-span-5 mt-8 lg:mt-0">
+                <figure class="bg-white p-4 rounded-lg shadow-md">
+                    <img
+                        class="w-full h-auto rounded-lg object-cover"
+                        src="./src/assets/images/masterclass.avif"
+                        alt="Masterclass sur l'animation"
+                    />
+                    <figcaption
+                        class="text-center pt-4 text-gray-600 font-medium"
+                    >
+                        Masterclass sur l'animation
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="mb-16">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div class="lg:col-span-5 order-2 lg:order-1 mt-8 lg:mt-0">
+                <figure class="bg-white p-4 rounded-lg shadow-md">
+                    <img
+                        class="w-full h-auto rounded-lg object-cover"
+                        src="./src/assets/images/musee.avif"
+                        alt="Musée Gustave Courbet"
+                    />
+                    <figcaption
+                        class="text-center pt-4 text-gray-600 font-medium"
+                    >
+                        Musée Gustave Courbet
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="lg:col-span-7 order-1 lg:order-2">
+                <h3 class="text-2xl lg:text-3xl font-bold mb-4">
+                    Activités annexes
+                </h3>
+                <p class="text-lg mb-6">
+                    Le festival, c'est bien plus que des projections ! Profitez
+                    d'un éventail d'activités pour enrichir votre expérience :
+                </p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Ateliers</span
+                            > : Initiez-vous aux techniques audiovisuelles, du montage
+                            vidéo à l'écriture de scénario, encadré par des professionnels.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Expositions</span
+                            > : Admirez des installations artistiques et photographiques
+                            célébrant le 7ᵉ art.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-orange-500"
+                                >Animations</span
+                            > : Vibrez avec des performances en direct, projections
+                            en plein air, et moments conviviaux pour tous les âges.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="mb-16">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            <div class="lg:col-span-8 mb-8 lg:mb-0">
+                <div class="bg-sky-50 p-6 rounded-lg border border-sky-100">
+                    <h3 class="text-xl lg:text-2xl font-bold mb-4">
+                        Téléchargement du programme (PDF)
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Pour ne rien manquer, téléchargez le programme complet
+                        du festival en un clic. Disponible au format PDF, il est
+                        conçu pour vous accompagner partout, en ligne ou hors
+                        ligne.
+                    </p>
+                    <a
+                        class="inline-block bg-orange-400 hover:bg-orange-500 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                        href=""
+                    >
+                        Télécharger le programme
+                    </a>
+                </div>
+            </div>
+
+            <!-- Admin link -->
+            <div class="lg:col-span-4">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <h3 class="text-xl lg:text-2xl font-bold mb-4">
+                        Ajoutez un film
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Espace réservé à l'administration du festival pour
+                        ajouter de nouveaux films à la programmation.
+                    </p>
+                    <a
+                        class="inline-block bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                        href="/programmation/add"
+                    >
+                        Accès administration
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
