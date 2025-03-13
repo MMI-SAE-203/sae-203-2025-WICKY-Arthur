@@ -5,6 +5,7 @@ import { InviteById } from "../../../backend/backend.mjs";
 import { formatDate } from "../../js/utils.js";
 const { id } = Astro.params;
 const Invite = await InviteById(id);
+console.log(Invite);
 ---
 
 <Layout>
@@ -40,7 +41,7 @@ const Invite = await InviteById(id);
     <div class="border-1 border-sky-900 w-full"></div>
     <section>
         <h3>Film associé</h3>
-        
+        <!-- <p>{Invite.expand?.film_invite.titre_film}</p> -->
     </section>
     <div class="border-1 border-sky-900 w-full"></div>
     <section>
