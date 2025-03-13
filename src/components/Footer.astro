@@ -45,3 +45,114 @@ import YoutubeLogo from "../assets/icons/youtube.svg";
     </div>
     <p class="p-2">© 2025 Flash Cinéma 25</p>
 </footer>
+
+
+---
+import Logo from "../assets/icons/logo.svg";
+import InstaLogo from "../assets/icons/instagram.svg";
+import TwitterLogo from "../assets/icons/twitter.svg";
+import FacebookLogo from "../assets/icons/facebook.svg";
+import YoutubeLogo from "../assets/icons/youtube.svg";
+---
+
+<footer class="bg-sky-950 text-white p-4 lg:p-8 mt-12">
+    <div class="container mx-auto">
+        <!-- Desktop Layout using grid -->
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            <!-- Logo and Festival Info -->
+            <div class="lg:col-span-4 mb-6 lg:mb-0">
+                <div class="flex items-center">
+                    <Logo class="w-12 h-12 lg:w-16 lg:h-16" />
+                    <div class="ml-4">
+                        <h2 class="text-lg lg:text-xl font-bold">Flash Cinéma 25</h2>
+                        <p class="text-sm lg:text-base text-gray-300">1ère édition du 8 au 10 Août 2025</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-sm lg:text-base text-gray-300 lg:pr-8">
+                    Un festival de courts-métrages au cœur de la région Bourgogne Franche-Comté, célébrant le cinéma indépendant et les talents émergents.
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div class="lg:col-span-2 mb-6 lg:mb-0">
+                <p class="uppercase text-sm lg:text-base text-gray-400 font-bold mb-3">Menu</p>
+                <nav>
+                    <ul class="space-y-2">
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/">Accueil</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/programmation">Programmation</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/activites">Activités</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/invites">Invités</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/infos">Infos pratiques</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/billetterie">Billetterie</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="lg:col-span-2 mb-6 lg:mb-0">
+                <p class="uppercase text-sm lg:text-base text-gray-400 font-bold mb-3">Légal</p>
+                <nav>
+                    <ul class="space-y-2">
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/mentions-legales">Mentions légales</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/politique-confidentialite">Politique de confidentialité</a></li>
+                        <li><a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="/credits">Crédits</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="lg:col-span-2 mb-6 lg:mb-0">
+                <p class="uppercase text-sm lg:text-base text-gray-400 font-bold mb-3">Contact</p>
+                <div class="space-y-2">
+                    <a class="text-sm lg:text-base block hover:text-orange-400 transition-colors" href="mailto:contact@flashcinema25.com">contact@flashcinema25.com</a>
+                    <p class="text-sm lg:text-base">15 rue Saint-Laurent<br />25290 Ornans</p>
+                    <a class="text-sm lg:text-base hover:text-orange-400 transition-colors" href="tel:+33383454545">03 83 45 45 45</a>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="lg:col-span-2">
+                <p class="uppercase text-sm lg:text-base text-gray-400 font-bold mb-3">Suivez-nous</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+                        <InstaLogo class="w-6 h-6" />
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+                        <TwitterLogo class="w-6 h-6" />
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
+                        <FacebookLogo class="w-6 h-6" />
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Youtube">
+                        <YoutubeLogo class="w-6 h-6" />
+                    </a>
+                </div>
+                <div class="mt-4">
+                    <p class="text-sm text-gray-400">Inscrivez-vous à notre newsletter :</p>
+                    <form class="mt-2 flex">
+                        <input 
+                            type="email" 
+                            placeholder="Votre email" 
+                            class="px-3 py-2 text-sm bg-sky-900 text-white rounded-l-lg border-sky-800 border focus:outline-none focus:ring-1 focus:ring-orange-400 w-full"
+                            required
+                        />
+                        <button 
+                            type="submit" 
+                            class="bg-orange-400 hover:bg-orange-500 text-white px-3 py-2 text-sm font-medium rounded-r-lg transition-colors"
+                        >
+                            OK
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar with Copyright -->
+        <div class="border-t border-sky-900 mt-8 pt-4 lg:pt-6 text-center lg:flex lg:justify-between lg:items-center">
+            <p class="text-xs lg:text-sm text-gray-400">&copy; 2025 Flash Cinéma 25. Tous droits réservés.</p>
+            <p class="text-xs lg:text-sm text-gray-400 mt-2 lg:mt-0">
+                Conçu avec <span class="text-orange-400">♥</span> par les étudiants du BUT MMI de Montbéliard
+            </p>
+        </div>
+    </div>
+</footer>

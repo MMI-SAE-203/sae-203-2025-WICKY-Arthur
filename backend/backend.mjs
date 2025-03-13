@@ -1,5 +1,6 @@
 import PocketBase from 'pocketbase';
-const pb = new PocketBase('http://127.0.0.1:8090')
+// const pb = new PocketBase('http://127.0.0.1:8090')
+const pb = new PocketBase('https://flashcinema25.arthurwicky.fr:443')
 export { pb };
 
 export async function allFilmSorted() {
@@ -15,7 +16,7 @@ export async function allInviteSorted() {
 }
 
 export async function FilmById(id) {
-    return await pb.collection('Film').getOne(id, {expand: 'present'});
+    return await pb.collection('Film').getOne(id, { expand: 'present' });
 }
 
 export async function ActivityById(id) {
@@ -44,6 +45,11 @@ export async function ActivityByInviteName(nom) {
     });
     return activityInviteName;
 }
+
+export async function getFilmsByGenre(genre) {
+    return await pb.collection('Film').getFullList({ filter: `genre_film = '${genre}'` });
+}
+
 
 //Ajouter et modifier les infos d'un film activité ou invité
 export async function addNewRecord(collection, newRecord) {
