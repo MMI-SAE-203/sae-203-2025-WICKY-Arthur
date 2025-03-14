@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import imageaccueil from "../assets/images/cineexterieur.avif";
+import imageaccueil2 from "../assets/images/cineexterieurwide.avif";
+import progaccueil from "./src/assets/images/prog_accueil.avif";
+import inviteaccueil from "./src/assets/images/invites_accueil.avif";
 ---
 
 <Layout>
 	<div class="">
-		<!-- Hero Section -->
 		<div class="relative w-full mb-8">
 			<img
 				class="z-0 w-full relative lg:hidden"
@@ -14,7 +16,7 @@ import imageaccueil from "../assets/images/cineexterieur.avif";
 			/>
 			<img
 				class="hidden z-0 w-full h-[900px] object-cover relative lg:block"
-				src="./src/assets/images/cineexterieurwide.avif"
+				src={imageaccueil2.src}
 				alt="Cinéma en plein air"
 			/>
 			<div
@@ -53,7 +55,7 @@ import imageaccueil from "../assets/images/cineexterieur.avif";
 					<div class="relative h-full">
 						<img
 							class="w-full rounded-lg h-64 lg:h-80 object-cover"
-							src="./src/assets/images/prog_accueil.avif"
+							src={progaccueil.src}
 							alt="Programmation"
 						/>
 						<div class="flex justify-end">
@@ -73,7 +75,7 @@ import imageaccueil from "../assets/images/cineexterieur.avif";
 					<div class="relative h-full">
 						<img
 							class="w-full rounded-lg h-64 lg:h-80 object-cover"
-							src="./src/assets/images/invites_accueil.avif"
+							src={inviteaccueil.src}
 							alt="Nos invités"
 						/>
 						<div class="flex justify-end">
