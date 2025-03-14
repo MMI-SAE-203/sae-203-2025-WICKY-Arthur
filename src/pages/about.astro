@@ -1,11 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import heroabout from "../assets/images/heroabout.avif";
+import alexandre_morel from "../assets/images/alexandre_morel.avif";
+import sophie_durand from "../assets/images/sophie_durand.avif";
+import claire_bernard from "../assets/images/claire_bernard.avif";
+import jules_lefevre from "../assets/images/jules_lefevre.avif";
+import thomas_gauthier from "../assets/images/thomas_gauthier.avif";
+import camille_perrin from "../assets/images/camille_perrin.avif";
+import elise_martineau from "../assets/images/elise_martineau.avif";
+import lucas_fontaine from "../assets/images/lucas_fontaine.avif";
 ---
 
 <Layout>
     <div class="flex justify-center">
         <h1 class="absolute pt-26">À propos</h1>
-        <img src="./src/assets/images/hero_about.avif" alt="" />
+        <img src={heroabout.src} alt="" />
     </div>
 
     <section>
@@ -57,7 +66,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex align-center gap-10 py-4">
                 <li class="flex flex-col">
                     <img
-                        src="./src/assets/images/alexandre_morel.avif"
+                        src={alexandre_morel.src}
                         alt=""
                     />
                     <div>
@@ -66,7 +75,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </li>
                 <li class="flex flex-col">
-                    <img src="./src/assets/images/sophie_durand.avif" alt="" />
+                    <img src={sophie_durand.src} alt="" />
                     <div>
                         <p>Sophie Durand</p>
                         <p class="font-light text-tiny">
@@ -78,7 +87,7 @@ import Layout from "../layouts/Layout.astro";
 
             <div class="flex align-center gap-10 pb-4">
                 <li class="flex flex-col">
-                    <img src="./src/assets/images/claire_bernard.avif" alt="" />
+                    <img src={claire_bernard.src} alt="" />
                     <div>
                         <p>Claire Bernard</p>
                         <p class="font-light text-tiny">
@@ -87,7 +96,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </li>
                 <li class="flex flex-col">
-                    <img src="./src/assets/images/jules_lefevre.avif" alt="" />
+                    <img src={jules_lefevre.src} alt="" />
                     <div>
                         <p>Jules Lefèvre</p>
                         <p class="font-light text-tiny">
@@ -100,7 +109,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex align-center gap-10 pb-4">
                 <li class="flex flex-col">
                     <img
-                        src="./src/assets/images/thomas_gauthier.avif"
+                        src={thomas_gauthier.src}
                         alt=""
                     />
                     <div>
@@ -111,7 +120,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </li>
                 <li class="flex flex-col">
-                    <img src="./src/assets/images/camille_perrin.avif" alt="" />
+                    <img src={camille_perrin.src} alt="" />
                     <div>
                         <p>Camille Perrin</p>
                         <p class="font-light text-tiny">
@@ -123,7 +132,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex align-center gap-10 pb-4">
                 <li class="flex flex-col">
                     <img
-                        src="./src/assets/images/elise_martineau.avif"
+                        src={elise_martineau.src}
                         alt=""
                     />
                     <div>
@@ -134,7 +143,7 @@ import Layout from "../layouts/Layout.astro";
                     </div>
                 </li>
                 <li class="flex flex-col">
-                    <img src="./src/assets/images/lucas_fontaine.avif" alt="" />
+                    <img src={lucas_fontaine.src} alt="" />
                     <div>
                         <p>Lucas Fontaine</p>
                         <p class="font-light text-tiny">

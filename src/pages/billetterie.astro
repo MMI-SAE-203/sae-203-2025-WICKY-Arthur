@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import herobilletterie from "../assets/images/hero_billetterie.avif";
+import herobilletterie2 from "../assets/images/hero_billetterie2.avif";
 ---
 
 <Layout>
@@ -9,12 +11,12 @@ import Layout from "../layouts/Layout.astro";
             <div class="lg:col-span-6 flex relative">
                 <img
                     class="w-full lg:hidden"
-                    src="./src/assets/images/hero_billetterie.avif"
+                    src={herobilletterie.src}
                     alt="Bannière billetterie"
                 />
                 <img
                     class="hidden lg:block w-full h-[600px] object-cover rounded-lg"
-                    src="./src/assets/images/hero_billetterie.avif"
+                    src={herobilletterie2.src}
                     alt="Bannière billetterie"
                 />
                 <h1
@@ -282,7 +284,8 @@ import Layout from "../layouts/Layout.astro";
                                     Contactez-nous par email<br /><a
                                         href="mailto:billetterie@flashcinema25.com"
                                         class="text-orange-400 hover:underline"
-                                        >billetterie@flashcinema25.com</a>
+                                        >billetterie@flashcinema25.com</a
+                                    >
                                 </p>
                             </div>
                         </div>

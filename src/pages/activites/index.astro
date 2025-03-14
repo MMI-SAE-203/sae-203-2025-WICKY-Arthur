@@ -3,21 +3,23 @@ import Layout from "../../layouts/Layout.astro";
 import CardActivite from "../../components/CardActivite.astro";
 import { allActivitiesSorted } from "../../../backend/backend.mjs";
 const activities = await allActivitiesSorted();
+import heroactivite from "../../assets/images/hero_activites.avif";
+import heroactivite2 from "../../assets/images/hero_activites2.avif";
 ---
 
 <Layout>
-    <div class=" lg:mx-8 lg:px-8 lg:mt-4">
+    <div class="lg:mx-8 lg:px-8 lg:mt-4">
         <!-- Hero Section -->
         <div class="lg:grid lg:grid-cols-12 lg:gap-8 mb-8">
             <div class="lg:col-span-6 flex relative">
                 <img
                     class="w-full lg:hidden"
-                    src="./src/assets/images/hero_activites.avif"
+                    src={heroactivite.src}
                     alt="Bannière activités"
                 />
                 <img
                     class="hidden lg:block w-full h-[400px] object-cover rounded-lg"
-                    src="./src/assets/images/hero_activites.avif"
+                    src={heroactivite2.src}
                     alt="Bannière activités"
                 />
                 <h1

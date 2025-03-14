@@ -1,11 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import heroinfos from "../assets/images/hero_infos.avif";
+import herobilleterie from "../assets/images/hero_billetterie.avif";
+import gare from "../assets/images/gare.avif";
 ---
 
 <Layout>
     <div class="flex justify-center">
         <h1 class="absolute pt-68 w-50 text-center">Informations pratiques</h1>
-        <img src="./src/assets/images/hero_infos.avif" alt="" />
+        <img src={heroinfos.src} alt="" />
     </div>
 
     <section>
@@ -39,11 +42,7 @@ import Layout from "../layouts/Layout.astro";
                     </li>
                 </li>
             </ul>
-            <img
-                class="-mb-6"
-                src="./src/assets/images/hero_billetterie.avif"
-                alt=""
-            />
+            <img class="-mb-6" src={herobilleterie.src} alt="" />
         </div>
     </section>
     <section>
@@ -125,7 +124,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div>
             <figure class="py-4">
-                <img src="./src/assets/images/gare_ornans.avif" alt="" />
+                <img src={gare.src} alt="" />
                 <figcaption class="flex justify-center">
                     Gare d'Ornans
                 </figcaption>

@@ -4,6 +4,8 @@ import CardInvite from "../../components/CardInvite.astro";
 import { allInviteSorted } from "../../../backend/backend.mjs";
 const { id } = Astro.params;
 const invites = await allInviteSorted();
+import heroinvite from "../../assets/images/hero_invites.avif";
+import heroinvite2 from "../../assets/images/hero_invites2.avif";
 ---
 
 <Layout>
@@ -12,12 +14,12 @@ const invites = await allInviteSorted();
             <div class="lg:col-span-6 flex relative">
                 <img
                     class="w-full lg:hidden"
-                    src="./src/assets/images/hero_invites.avif"
+                    src={heroinvite.src}
                     alt="Bannière invités du festival"
                 />
                 <img
                     class="hidden lg:block w-full h-[400px] object-cover rounded-lg"
-                    src="./src/assets/images/hero_invites.avif"
+                    src={heroinvite2.src}
                     alt="Bannière invités du festival"
                 />
                 <h1

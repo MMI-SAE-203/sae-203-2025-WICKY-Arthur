@@ -3,8 +3,11 @@ import CarouselFilm from "../../components/CarouselFilm.astro";
 import Layout from "../../layouts/Layout.astro";
 import FilmCard from "../../components/CardFilm.astro";
 import { allFilmSorted } from "../../../backend/backend.mjs";
-
 const Film = await allFilmSorted();
+import heroprog from "../assets/images/hero_prog.avif";
+import heroprog2 from "../assets/images/prog_accueil.avif";
+import masterclass from "../assets/images/masterclass.avif";
+import musee from "../assets/images/musee.avif";
 ---
 
 <Layout>
@@ -13,12 +16,12 @@ const Film = await allFilmSorted();
             <div class="lg:col-span-6 flex relative">
                 <img
                     class="w-full lg:hidden"
-                    src="./src/assets/images/hero_prog.avif"
+                    src={heroprog.src}
                     alt="Bannière programmation"
                 />
                 <img
                     class="hidden lg:block w-full h-[400px] object-cover rounded-lg"
-                    src="./src/assets/images/prog_accueil.avif"
+                    src={heroprog2.src}
                     alt="Bannière programmation"
                 />
                 <h1
@@ -102,7 +105,7 @@ const Film = await allFilmSorted();
                 <figure class="bg-white p-4 rounded-lg shadow-md">
                     <img
                         class="w-full h-auto rounded-lg object-cover"
-                        src="./src/assets/images/masterclass.avif"
+                        src={masterclass.src}
                         alt="Masterclass sur l'animation"
                     />
                     <figcaption
@@ -120,7 +123,7 @@ const Film = await allFilmSorted();
                 <figure class="bg-white p-4 rounded-lg shadow-md">
                     <img
                         class="w-full h-auto rounded-lg object-cover"
-                        src="./src/assets/images/musee.avif"
+                        src={musee.src}
                         alt="Musée Gustave Courbet"
                     />
                     <figcaption
