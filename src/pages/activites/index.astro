@@ -4,7 +4,6 @@ import CardActivite from "../../components/CardActivite.astro";
 import { allActivitiesSorted } from "../../../backend/backend.mjs";
 const activities = await allActivitiesSorted();
 import heroactivite from "../../assets/images/hero_activites.avif";
-import heroactivite2 from "../../assets/images/hero_activites2.avif";
 ---
 
 <Layout>
@@ -19,7 +18,7 @@ import heroactivite2 from "../../assets/images/hero_activites2.avif";
                 />
                 <img
                     class="hidden lg:block w-full h-[400px] object-cover rounded-lg"
-                    src={heroactivite2.src}
+                    src={heroactivite.src}
                     alt="Bannière activités"
                 />
                 <h1
