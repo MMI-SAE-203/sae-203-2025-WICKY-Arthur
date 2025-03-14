@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Picture } from "astro.assets";
 import imageaccueil from "../assets/images/cineexterieur.avif";
 import imageaccueil2 from "../assets/images/cineexterieurwide.avif";
 import progaccueil from "./src/assets/images/prog_accueil.avif";
@@ -53,11 +54,15 @@ import inviteaccueil from "./src/assets/images/invites_accueil.avif";
 				<!-- Programmation -->
 				<div class="lg:col-span-6 xl:col-span-4">
 					<div class="relative h-full">
-						<img
+						<figure
 							class="w-full rounded-lg h-64 lg:h-80 object-cover"
-							src={progaccueil.src}
-							alt="Programmation"
-						/>
+						>
+							<Picture
+								<img
+								src={progaccueil.src}
+								alt="Programmation"
+							/>/>
+						</figure>
 						<div class="flex justify-end">
 							<button
 								class="relative -mt-4 -mr-2 uppercase bg-orange-400 hover:bg-orange-500 transition-colors rounded-xl p-3"
